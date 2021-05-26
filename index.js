@@ -75,6 +75,7 @@ class CmdHelper extends Helper {
                 if ( showOutput && ( chunk !== undefined && chunk !== null ) ) {
                     console.log( chunk.toString() );
                 }
+				resolve( chunk.toString() );
             } );
 
             child.stderr.on( 'data', ( chunk ) => {
